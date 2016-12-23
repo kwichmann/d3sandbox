@@ -1,0 +1,26 @@
+{
+  "name": "d3sandbox",
+  "version": "1.0.0",
+  "description": "Minimal server",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwichmann/d3sandbox.git"
+  },
+  "keywords": [
+    "d3"
+  ],
+  "author": "kwichmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kwichmann/d3sandbox/issues"
+  },
+  "homepage": "https://github.com/kwichmann/d3sandbox#readme"
+}
