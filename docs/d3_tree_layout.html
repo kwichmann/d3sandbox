@@ -39,7 +39,7 @@
 			.attr("fill", "steelblue");
 
 		node.append("text")
-			.text(function(d) {return d.name;})
+			.text(function(d) {return d.name;});
 
 		var diagonal = d3.svg.diagonal()
 			.projection(function(d) {return [d.y, d.x];});
