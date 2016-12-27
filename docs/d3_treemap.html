@@ -3,7 +3,7 @@
 
 <head>
 	<title>D3 histogram test</title>
-	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="lib/d3.v3.min.js"></script>
 </head>
 
 <body>
@@ -16,8 +16,6 @@
 		.attr("width", 500);
 
 	d3.json("tree2.json", function(data) {
-
-		console.log(data);
 
 		var treemap = d3.layout.treemap()
 			.size([500, 500])
