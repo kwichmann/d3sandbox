@@ -19,7 +19,7 @@
 	var tree = d3.layout.tree()
 		.size([400, 400])
 		
-	d3.json("tree.json", function(data) {
+	d3.json("data/tree.json", function(data) {
 
 		var nodes = tree.nodes(data);
 		var links = tree.links(nodes);
