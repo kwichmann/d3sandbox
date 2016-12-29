@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Titanic data set viz</title>
+	<script src="lib/d3.v4.min.js"></script>
+	<script src="lib/dimple.v2.3.0.min.js"></script>
+</head>
+
+<body>
+	
+	<div id = "chartContainer">
+		<h2>Survivors by passenger class</h2>
+	</div>
+
+	<script type = "text/javascript">
+
+	var svg = dimple.newSvg("#chartContainer", 600, 400);
+	d3.csv("data/titanic1.csv", function(data) {
+
+		var chartInstance = new dimple.chart(svg, data);
+		chartInstance.setBounds(60, 30, 510, 305);
+		var x = chartInstance.addCategoryAxis('x', 'Passenger Class');
+		x.addOrderRule('Type');
+		var y = chartInstance.addPctAxis('y', 'Count');
+		var s = chartInstance.addSeries('Status', dimple.plot.bar)
+		chartInstance.addLegend(60, 10, 510, 20, 'right');
+		chartInstance.draw(1000);
+	});
+	</script>
+	
+	<div id = "chartContainer2">
+		<h2>Passenger share by class</h2>
+	</div>
+
+	<script type = "text/javascript">
+
+	var svg2 = dimple.newSvg("#chartContainer2", 600, 400);
+	d3.csv("data/titanic1.csv", function(data) {
+
+		var chartInstance = new dimple.chart(svg2, data);
+		chartInstance.setBounds(20, 20, 460, 360);
+		chartInstance.addMeasureAxis('p', 'Passenger Class');
+		chartInstance.addSeries('Passenger Class', dimple.plot.pie);
+		chartInstance.addLegend(500, 20, 90, 300, "left");
+		chartInstance.draw();
+
+	});
+
+	</script>
+
+</body>
+
+</html>
